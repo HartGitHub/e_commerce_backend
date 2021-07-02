@@ -7,6 +7,16 @@ class Category extends Model {}
 Category.init(
   {
     // define columns
+    id:{
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    auto_increment: true,
+    primaryKey: true,
+  },
+    category_name:{
+      type: DataTypes.STRING,
+      allowNull: false,
+    }
   },
   {
     sequelize,
@@ -14,7 +24,19 @@ Category.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'category',
-  }
+    
+    
+    auto_increment: true,
+    primaryKey: true,
+   
+    category_name:{
+      type: DataTypes.STRING,
+      allowNull: false,
+    }
+    }
+    
+  
+
 );
 
 module.exports = Category;
